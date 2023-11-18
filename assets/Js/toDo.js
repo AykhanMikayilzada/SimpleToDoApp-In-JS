@@ -8,9 +8,13 @@ button.addEventListener("click", function () {
   data.push(value);
   
   let result = data.map(function (el,index) {
-    return `<li>${index+1+")"} ${el}</li>`
-  }).join("")
-
+    if(value == ""){
+      alert("Zehmet olmasa her hansısa məlumat daxil edin")
+    }
+    else{
+     return `<li>${index+1+")"} ${el}</li>`
+  }).join("") 
+    }
   list.innerHTML = result;
   input.value = ""
   
